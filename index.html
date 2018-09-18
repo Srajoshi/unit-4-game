@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystals Collector</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mt-4">
+        <h1>Crystals Collector Game!</h1><br><br>
+      </div>
+      <div class="col-4 mt-4">
+        <h4>Click a crystal to begin</h4>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4>Game Play: </h4>There are four crystals below. Click on a crystal to add a specific amount to your score.
+        You win if you match your score to target score. You lose if your score exceeds the target score. Click on any
+        crystal to begin!
+      </div>
+    </div><br><br>
+    <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-xs-12 text-center">
+        <img class="btn img-responsive float-left mr-3 mb-3" src="assets/images/purple-crystal.jpg" alt="purple crystal"
+          width=200px role="button" id="purple">
+
+        <img class="btn img-responsive float-left mr-3 mb-3" src="assets/images/green-crystal.jpg" alt="green crystal"
+          width=200px role="button" id="green">
+
+        <img class="btn img-responsive float-left mr- 3 mb-3" src="assets/images/red-crystal.jpeg" alt="red crystal"
+          width=200px role="button" id="red">
+
+        <img class=" btn img-responsive float-left mr-3 mb-3" src="assets/images/blue-crystal.jpg" alt="blue crystal"
+          width=200px role="button" id="blue">
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- <div class = "row text-center"><h4 id="message"></h4></div> -->
+  <div class="container">
+      <div class = "row text-center"><h2 id="message"></h2></div>
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h4>Target Number: <span id="targetNum"></span> </h4>
+      </div>
+      <div class="col text-center mt-3">
+        <h4>Wins: <span id="wins">0</span> </h4>
+      </div>
+      <div class="w-100"></div>
+      <div class="col text-center mt-3">
+        <h4>Your Number: <span id="userNum"></span> </h4>
+      </div>
+      <div class="col text-center mt-3">
+        <h4>Losses: <span id="losses">0</span></h4>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/javascript/game.js"></script>
+  <script>
+    // $("#blue").on("click",function(){
+    //   alert("innn")
+    // })
+  </script>
+</body>
+
+</html>
