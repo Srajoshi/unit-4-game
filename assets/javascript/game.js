@@ -34,18 +34,24 @@
 
    $("#targetNum").html(targetNum);
    $("#message").text("");
-   $("#userNum").empty();
+   $("#userNum").html("");
 
+   console.log("targetNum: " + targetNum);
+   console.log("userNum: " + userNum);
+   console.log("purpleNum: " + purpleNum);
+   console.log("redNum: " + redNum);
+   console.log("greenNum: " + greenNum);
+   console.log("blueNum: " + blueNum);
 
  }
 
  reset();
- console.log("targetNum: " + targetNum);
- console.log("userNum: " + userNum);
- console.log("purpleNum: " + purpleNum);
- console.log("redNum: " + redNum);
- console.log("greenNum: " + greenNum);
- console.log("blueNum: " + blueNum);
+ //  console.log("targetNum: " + targetNum);
+ //  console.log("userNum: " + userNum);
+ //  console.log("purpleNum: " + purpleNum);
+ //  console.log("redNum: " + redNum);
+ //  console.log("greenNum: " + greenNum);
+ //  console.log("blueNum: " + blueNum);
 
  function endGame() {
 
@@ -54,6 +60,7 @@
      $("#message").text("You won!");
      wins = wins + 1;
      $("#wins").html(wins);
+     gameFlag = false;
 
    }
    if (userNum > targetNum) {
@@ -61,81 +68,85 @@
      $("#message").text("You lost!");
      losses = losses + 1;
      $("#losses").html(losses);
+     gameFlag = false;
 
    }
 
  }
 
-//  if (gameFlag === false) {
+ //  if (gameFlag === false) {
 
-//    endGame();
-//    console.log(gameFlag);
-//  }
+ //    endGame();
+ //    console.log(gameFlag);
+ //  }
 
 
  $("#purple").on("click", function () {
-  
+
    if (gameFlag === true) {
      userNum = userNum + purpleNum;
      $("#userNum").html(userNum);
      if (userNum === targetNum || userNum > targetNum) {
-      //  gameFlag = false;
-      //  console.log(gameFlag);
-      endGame();
+       //gameFlag = false;
+       //  console.log(gameFlag);
+       endGame();
      };
 
+   } else {
+     reset();
    };
-  });
-  
+ });
 
-   $("#green").on("click", function () {
-    
-     if (gameFlag === true) {
-       userNum = userNum + greenNum;
-       
-       $("#userNum").html(userNum);
-       if (userNum === targetNum || userNum > targetNum) {
-        //  gameFlag = false;
-        //  console.log(gameFlag);
-        endGame();
-       }
-     }
 
-   });
+ $("#green").on("click", function () {
 
-   $("#red").on("click", function () {
-     if (gameFlag === true) {
-       userNum = userNum + redNum;
-       
-       $("#userNum").html(userNum);
-       if (userNum === targetNum || userNum > targetNum) {
-        //  gameFlag = false;
-        //  console.log(gameFlag);
-        endGame();
-       }
-     }
+   if (gameFlag === true) {
+     userNum = userNum + greenNum;
 
-   });
-
-   $("#blue").on("click", function () {
-
-    if (gameFlag === true) {
-     userNum = userNum + blueNum;
-     
      $("#userNum").html(userNum);
      if (userNum === targetNum || userNum > targetNum) {
-      // gameFlag = false;
-      // console.log(gameFlag);
-      endGame ();
-      
-    }
-  }
+       //gameFlag = false;
+       //  console.log(gameFlag);
+       endGame();
+     };
 
-   });
+   } else {
+     reset();
+   };
 
-  //  if (gameFlag === false) {
+ });
 
-  //    endGame();
-  //    console.log(gameFlag);
-  //  }
- 
+ $("#red").on("click", function () {
+   if (gameFlag === true) {
+     userNum = userNum + redNum;
+
+     $("#userNum").html(userNum);
+     if (userNum === targetNum || userNum > targetNum) {
+       //gameFlag = false;
+       //  console.log(gameFlag);
+       endGame();
+     };
+   } else {
+     reset();
+   };
+
+ });
+
+ $("#blue").on("click", function () {
+
+   if (gameFlag === true) {
+     userNum = userNum + blueNum;
+     console.log(gameFlag);
+     console.log(userNum);
+     $("#userNum").html(userNum);
+     if (userNum === targetNum || userNum > targetNum) {
+       //gameFlag = false;
+       // console.log(gameFlag);
+       endGame();
+
+     };
+   } else {
+     reset();
+   };
+
+ });
