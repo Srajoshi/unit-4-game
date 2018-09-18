@@ -79,8 +79,9 @@
      userNum = userNum + purpleNum;
      $("#userNum").html(userNum);
      if (userNum === targetNum || userNum > targetNum) {
-       gameFlag = false;
-       
+      //  gameFlag = false;
+      //  console.log(gameFlag);
+      endGame();
      };
 
    };
@@ -94,8 +95,9 @@
        
        $("#userNum").html(userNum);
        if (userNum === targetNum || userNum > targetNum) {
-         gameFlag = false;
-         
+        //  gameFlag = false;
+        //  console.log(gameFlag);
+        endGame();
        }
      }
 
@@ -107,8 +109,9 @@
        
        $("#userNum").html(userNum);
        if (userNum === targetNum || userNum > targetNum) {
-         gameFlag = false;
-        
+        //  gameFlag = false;
+        //  console.log(gameFlag);
+        endGame();
        }
      }
 
@@ -121,16 +124,18 @@
      
      $("#userNum").html(userNum);
      if (userNum === targetNum || userNum > targetNum) {
-      gameFlag = false;
+      // gameFlag = false;
+      // console.log(gameFlag);
+      endGame ();
       
     }
   }
 
    });
 
-   if (gameFlag === false) {
+  //  if (gameFlag === false) {
 
-     endGame();
-     console.log(gameFlag);
-   }
+  //    endGame();
+  //    console.log(gameFlag);
+  //  }
  
